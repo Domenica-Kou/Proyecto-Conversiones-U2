@@ -68,3 +68,19 @@ def mostrar_converiones(conversion_a_realizar):
     boton_convertir.pack(pady=10)
 
     ventana.mainloop()
+
+def mostrar_menu():
+    ventana_menu = tk.Tk()
+    ventana_menu.title("Menú de Conversiones")
+    ventana_menu.geometry("300x250")
+    ventana_menu.configure(bg="#d8a3ee")
+
+    tk.Label(ventana_menu, text="Selecciona una opción:", bg="#a74ccd", font=("Courier", 14)).pack(pady=15)
+
+    tk.Button(ventana_menu, text="Conversión de Longitud", command=lambda:mostrar_converiones("Longitud"), font=("Courier", 12), bg="#a74ccd").pack(pady=5)
+    tk.Button(ventana_menu, text="Conversión de Masa", command=lambda:mostrar_converiones("Masa"), font=("Courier", 12), bg="#a74ccd").pack(pady=5)
+    tk.Button(ventana_menu, text="Conversión de Tiempo", command=lambda:mostrar_converiones("Tiempo"), font=("Courier", 12), bg="#a74ccd").pack(pady=5)
+
+    ventana_menu.mainloop()
+
+mostrar_menu()
