@@ -44,18 +44,18 @@ def mostrar_converiones(conversion_a_realizar):
         conversiones = ["Segundos a Minutos", "Horas a Días"]
         funcion = conversion_tiempo
 
-    tk.Label(ventana, text="Conversión de " + conversion_a_realizar, bg="#a74ccd", font=("Courier", 14)).pack(pady=10)
-    tk.Label(ventana, text="Selecciona tipo de conversión:", bg="#a74ccd", font=("Courier", 12)).pack()
+    tk.Label(ventana, text="Conversión de " + conversion_a_realizar, bg="#d8a3ee", font=("Courier", 14)).pack(pady=10)
+    tk.Label(ventana, text="Selecciona tipo de conversión:", bg="#d8a3ee", font=("Courier", 12)).pack()
 
     combo = ttk.Combobox(ventana, values=conversiones, state="readonly", font=("Courier", 12))
     combo.pack(pady=5)
     combo.current(0)
 
-    tk.Label(ventana, text="Valor a convertir:", bg="#a74ccd", font=("Courier", 12)).pack()
+    tk.Label(ventana, text="Valor a convertir:", bg="#d8a3ee", font=("Courier", 12)).pack()
     entrada = tk.Entry(ventana, font=("Courier", 12))
     entrada.pack(pady=5)
 
-    resultado_label = tk.Label(ventana, text="Resultado: ", bg="#a74ccd", font=("Courier", 12))
+    resultado_label = tk.Label(ventana, text="Resultado: ", bg="#d8a3ee", font=("Courier", 12))
     resultado_label.pack(pady=10)
 
     boton_convertir = tk.Button(
@@ -75,7 +75,7 @@ def mostrar_menu():
     ventana_menu.geometry("300x250")
     ventana_menu.configure(bg="#d8a3ee")
 
-    tk.Label(ventana_menu, text="Selecciona una opción:", bg="#a74ccd", font=("Courier", 14)).pack(pady=15)
+    tk.Label(ventana_menu, text="Selecciona una opción:", bg="#d8a3ee", font=("Courier", 14)).pack(pady=15)
 
     tk.Button(ventana_menu, text="Conversión de Longitud", command=lambda:mostrar_converiones("Longitud"), font=("Courier", 12), bg="#a74ccd").pack(pady=5)
     tk.Button(ventana_menu, text="Conversión de Masa", command=lambda:mostrar_converiones("Masa"), font=("Courier", 12), bg="#a74ccd").pack(pady=5)
